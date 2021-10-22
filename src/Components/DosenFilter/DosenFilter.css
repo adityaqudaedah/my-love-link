@@ -1,0 +1,20 @@
+.dosen-filter {
+  width: 100%;
+  background-color: #393e46;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.dosen-filter__control {
+  color: #eeeeee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .dosen-filter{
+    width: 85%;
+  }
+}

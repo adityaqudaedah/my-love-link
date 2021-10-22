@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Dosen from "./Components/Dosen/Dosen";
+import DosenFilter from "./Components/DosenFilter/DosenFilter";
+import DosenForm from "./Components/DosenForm/DosenForm";
+import { db } from "./firebase/fire-config";
+import { collection, getDocs } from "firebase/firestore";
+import Title from './Components/Title/Title'
+import Footer from "./Components/Footer/Footer";
 
-function App() {
+const App = () => {
+  const [filteredDay, setFilteredDay] = useState("senin");
+  const [dosen, setDosen] = useState([]);
+  const dosenCollectionRef = collection(db,'dosen')
+
+  const filteredDosen = dosen.filter((data) => {
+    return data.hari === filteredDay
+  })
+
+  const changeFilterHandler = (selectedYear) => {
+    setFilteredDay(selectedYear)
+  }
+  useEffect(() => {
+    const getDosen = async () => {
+      const dataDosen = await getDocs(dosenCollectionRef);
+      setDosen(dataDosen.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getDosen();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Title />
+      <DosenForm />
+      <DosenFilter selected={filteredDay} onChangeFilter={changeFilterHandler}/>
+      <Dosen dosen={filteredDosen} />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

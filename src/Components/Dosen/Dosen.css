@@ -1,0 +1,34 @@
+.dosen{
+    background-color: #393E46;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+
+}
+
+.dosen__not-found p{
+    color: #eeee;
+}
+.dosen__not-found img{
+    display: block;
+    width: 10rem;
+}
+
+.drop-down{
+    color: #222831;
+    font-weight: bold;
+    background-color: rgb(228, 228, 228);
+    width: 5rem;
+    padding: 0.2rem;
+    border-radius: 6px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .dosen{
+      width:90%;
+    }
+}

@@ -1,0 +1,19 @@
+
+.form-dosen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00ADB5;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .form-dosen{
+      width: 85%;
+      margin-left: 0;
+    }
+
+}

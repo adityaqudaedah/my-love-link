@@ -1,0 +1,137 @@
+.dosen-items {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: #eeeeee;
+  background-color: #00adb5;
+  margin-bottom: 1rem;
+  width: 20rem;
+}
+
+.dosen-items__name-tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dosen-items__description {
+}
+
+.tags {
+  margin-left: 2px;
+  font-size: 0.8em;
+  padding: 0.1rem 0.3rem;
+  border-radius: 16px;
+  background-color: rgb(230, 214, 214);
+  color: #393e46;
+}
+
+.copy {
+  background-color: #393e46;
+  color: white;
+  margin-left: 1rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  --width: 2rem;
+  bottom: 100%;
+  left: -20%;
+  margin-left: calc(var(--width)/-2); /* Use half of the width (120/2 = 60), to center the tooltip */
+  margin-bottom: 5px;
+  background-color: rgb(66, 65, 65);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0.5rem;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(66, 65, 65) transparent transparent transparent;
+} */
+#copy-hover:hover {
+  cursor: pointer;
+}
+#link{
+  text-decoration: none;
+}
+#link:hover {
+  cursor: pointer;
+}
+img {
+  width: 3rem;
+}
+
+#drop-down {
+  transform: rotate(270deg);
+  animation: dropDownAnimation 0.7s ease;
+}
+
+#drop-down img {
+  width: 1rem;
+}
+
+#drop-down:hover {
+  cursor: pointer;
+}
+
+#clipboard {
+  position: absolute;
+  width: 1.5rem;
+}
+ 
+ @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .dosen-items{
+    width: 20rem;
+    padding: 0.1rem;
+  }
+  .dosen-items__name-tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+  }
+
+  .dosen-items__description {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dosen-items__description h5{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .copy {
+    background-color: #393e46;
+    color: white;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+} 

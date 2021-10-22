@@ -1,0 +1,108 @@
+.input-dosen-form__logout a{
+  color: #393E46;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.input-dosen-form__logout a:hover{
+  color: #222831;
+}
+.input-dosen__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.input-dosen-form__admin h3{
+color: rgb(250, 249, 249);
+}
+.input-dosen__avatar img {
+  width: 5rem;
+  height: 5rem;
+  background-size: contain;
+  background-position: center;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.input-dosen-form {
+  width: inherit;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input-dosen-form__matkul {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+
+}
+
+.input-dosen-form__matkul .left-items {
+  margin-right: 10px;
+}
+
+.input-group__input {
+  width: 96%;
+  border-radius: 12px;
+  padding: 0 0.5rem;
+  border: 1px solid #3333;
+  background-color: rgb(253, 249, 247);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.input-group__input input {
+  width: inherit;
+  background-color: transparent;
+  border-style: none;
+  color: rgb(18, 4, 107);
+  font-weight: bold;
+}
+
+/* for chrome*/
+.input-group__input input:focus {
+  outline-width: 0;
+}
+
+/*for FireFox*/
+.input-group__input input{
+    outline: none;
+    border: none;
+}
+
+.input-form-dosen__action{
+  display: flex;
+  width: 95%;
+  justify-content: flex-end;
+
+}
+
+.input-form-dosen__action button{
+  margin: 0 2px 2px 0;
+  padding: 0.8rem 1rem;
+  background-color: brown;
+  color: white;
+  border-radius: 12px;
+  border-style: none;
+  font-weight: bold;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.input-form-dosen__action button:hover{
+  cursor: pointer;
+}
+#cancel-button{
+  background-color: tomato;
+  margin-right: 0.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .input-group__input{
+    width:80%;
+  }
+}
