@@ -43,10 +43,10 @@
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  --width: 2rem;
+  /* --width: 2rem; */
   bottom: 100%;
   left: -20%;
-  margin-left: calc(var(--width)/-2); /* Use half of the width (120/2 = 60), to center the tooltip */
+  /* margin-left: calc(var(--width)/-2); Use half of the width (120/2 = 60), to center the tooltip */
   margin-bottom: 5px;
   background-color: rgb(66, 65, 65);
   color: #fff;
