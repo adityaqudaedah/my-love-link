@@ -78,11 +78,13 @@
   cursor: pointer;
 }
 #link{
+  word-break: break-all;
   text-decoration: none;
 }
 #link:hover {
   cursor: pointer;
 }
+
 img {
   width: 3rem;
 }
@@ -104,7 +106,12 @@ img {
   position: absolute;
   width: 1.5rem;
 }
- 
+
+.dosen-items__description h5{
+  display: flex;
+  flex-wrap: wrap;
+}
+
  @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .dosen-items{
@@ -122,11 +129,6 @@ img {
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
-  }
-
-  .dosen-items__description h5{
-    display: flex;
-    flex-wrap: wrap;
   }
 
   .copy {

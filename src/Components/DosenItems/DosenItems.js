@@ -53,7 +53,7 @@ const DosenItems = (props) => {
           <h5>
             Link :
             <a href={props.link} className="tags" id="link" ref={linkValue}>
-              {props.link}
+             {props.link}
             </a>
             <span onMouseOut={outHandler} onClick={getLink}className="tags copy tooltip" id="copy-hover">
               Copy <span className="tooltiptext"><span>{clipboard}</span></span>
